@@ -4,7 +4,7 @@
   "description": "node-localdb",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
     "bluebird": "^2.9.34",
     "lodash": "^3.10.1",
     "node-uuid": "^1.4.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.0"
   }
 }
