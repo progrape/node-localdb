@@ -32,10 +32,15 @@ user.find({}).then(function(us){
     console.log(us); // an array with one object
 });
 
+// count
+user.count({}).then(function(count){
+    console.log(count); // 1
+});
+
 // remove
 user.remove({username: 'jf'}).then(function(u){
     console.log(u); // the user was remove successfully
-})
+});
 ```
 
 
