@@ -1,4 +1,4 @@
-# node-localdb
+# node-localdb ![](https://api.travis-ci.org/progrape/node-localdb.svg?branch=master)
 
 a very lightweight local json file database for node.js, just for convenience in development env.
 
@@ -42,5 +42,4 @@ user.remove({username: 'jf'}).then(function(u){
     console.log(u); // the user was remove successfully
 });
 ```
-
 
