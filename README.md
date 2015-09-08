@@ -31,6 +31,9 @@ user.find({}).then(function(us){
     console.log(us.length); // 1
     console.log(us); // an array with one object
 });
+user.find({}, {limit: 10, skip: 10 * 2}).then(function(us){
+    console.log(us); // for pagination
+});
 
 // count
 user.count({}).then(function(count){

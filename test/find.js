@@ -46,7 +46,7 @@ describe('node-localdb', function() {
                     assert.equal('123', u.password);
                     assert.notEqual(undefined, u._id);
                     done();
-                })
+                });
             });
         });
 
@@ -58,7 +58,33 @@ describe('node-localdb', function() {
                     assert.equal(true, users instanceof Array);
                     assert.equal(2, users.length);
                     done();
-                })
+                });
+            });
+        });
+
+        it('should return 1 object when there is pagination size is 1', function (done){
+            user.find({}, {
+                limit: 1,
+                skip: 0
+            }).then(function (us){
+                assert.notEqual(undefined, us);
+                assert.equal('object', typeof us);
+                assert.equal(true, us instanceof Array);
+                assert.equal(1, us.length);
+                done();
+            });
+        });
+
+        it('should return 2 object when there is pagination size is 2', function (done){
+            user.find({}, {
+                limit: 2,
+                skip: 0
+            }).then(function (us){
+                assert.notEqual(undefined, us);
+                assert.equal('object', typeof us);
+                assert.equal(true, us instanceof Array);
+                assert.equal(2, us.length);
+                done();
             });
         });
     });
