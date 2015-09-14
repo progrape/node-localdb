@@ -2,11 +2,13 @@
 
 a very lightweight local json file database for node.js, just for convenience in development env.
 
-## useage
-
+## install
 ```
 npm install node-localdb --save
 ```
+
+## useage
+
 
 ```javascript
 var db = require('node-localdb');
@@ -45,4 +47,7 @@ user.remove({username: 'jf'}).then(function(u){
     console.log(u); // the user was remove successfully
 });
 ```
+
+## License
+The MIT License (http://opensource.org/licenses/MIT)
 
